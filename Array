@@ -1,0 +1,66 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testing;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author ACER
+ */
+public class Testing {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+int row, kolom;
+int tambah;
+String[] [] data = new String[40][4];
+
+Scanner input = new Scanner(System.in);
+
+System.out.println("\nMasukkan Data Mahasiswa Maksimal 40 Mahasiswa");
+
+for (row = 0; row < 40; row++){
+
+System.out.println("\tTambah Data tekan 1 \t Print Data tekan 2 : ");
+try {
+tambah = input.nextInt();
+}
+catch (Exception e){
+System.out.println("Ketik angka 1 atau 2 :");
+break;
+}
+
+if (tambah == 1) {
+System.out.println("\n Masukkan Data Tanpa spasi :");
+
+System.out.print("Data Mahasiswa ke :");
+data[row][0] = input.next();
+System.out.print("Masukkan NPM : ");
+data[row][1] = input.next();
+System.out.print("Masukkan Nama : ");
+data[row][2] = input.next();
+System.out.print("Masukkan No.hp : ");
+data[row][3] = input.next();
+}
+else{
+if (tambah ==2){
+System.out.println("\nData ke: NPM : Nama : No.hp : ");
+for (row = 0; row< 40; row++){
+for(kolom = 0; kolom < 4; kolom++){
+System.out.print(data [row][kolom] + " : ");
+} System.out.println(" ");
+}
+break;
+}
+else
+break;
+}
+}
+}
+}
